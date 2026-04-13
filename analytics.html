@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analytics</title>
+</head>
+<body>
+    <h2>Average Scores</h2>
+
+    <ul>
+        {% for d in data %}
+        <li>
+            {{ d.name }} - Average: {{ d.avg_score }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/dashboard">Back</a>
+</body>
+</html>
