@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subject Details</title>
+</head>
+<body>
+    <h2>Subject Scores</h2>
+
+    <form method="POST">
+        <input type="number" name="score" placeholder="Score" required>
+        <input type="date" name="date" required>
+        <button type="submit">Add Score</button>
+    </form>
+
+    <ul>
+        {% for s in scores %}
+        <li>
+            Score: {{ s.score }} | Date: {{ s.date }}
+            <a href="/delete_score/{{ s.id }}/{{ subject_id }}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/dashboard">Back</a>
+</body>
+</html>
