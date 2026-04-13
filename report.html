@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+</head>
+<body>
+    <h2>Full Report</h2>
+
+    <table border="1">
+        <tr>
+            <th>Subject</th>
+            <th>Score</th>
+            <th>Date</th>
+        </tr>
+
+        {% for r in report_data %}
+        <tr>
+            <td>{{ r.name }}</td>
+            <td>{{ r.score }}</td>
+            <td>{{ r.date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/dashboard">Back</a>
+</body>
+</html>
